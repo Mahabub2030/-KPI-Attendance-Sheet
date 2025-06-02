@@ -68,7 +68,7 @@
                 <thead class="table-dark">
                   <!-- Headers will be dynamically generated -->
                 </thead>
-                <tbody>
+                <tbody >
                   <!-- Data will be dynamically generated -->
                 </tbody>
               </table>
@@ -107,26 +107,26 @@
         // Create header rows
         let headerHTML = `
                 <tr class="text-capitalize">
-                    <th colspan="4" class="text-center text-bg-Info fw-bolder text-lg"></th>
-                    <th colspan="${daysInMonth}" class="text-center text-bg-Info fw-bolder text-lg"><h5>${new Date(
+                    <th colspan="4" class="text-center text-bg-Info fw-bolder text-sm"></th>
+                    <th colspan="${daysInMonth}" class="text-center text-bg-Info fw-bolder text-sm"><h5>${new Date(
           year,
           month - 1
         ).toLocaleString("default", { month: "long" })} ${year}</h5></th>
                 </tr>
                 <tr class="text-capitalize">
-                    <th class="text-bg-Info fw-bolder col-auto text-center text-lg"><h5>S.N</h5></th>
-                    <th class="text-bg-Info fw-bolder text-center col-auto text-lg"><h5>Employee ID No.</h5></th>
-                    <th class="text-bg-Info fw-bolder text-center col-auto text-lg"><h5>DACO ID No.</h5></th>
-                    <th class="text-bg-success fw-bolder text-center col-4 text-lg"><h5>Employees Name</h5></th>
-                    <th class="text-bg-Info fw-bolder text-center col-4 text-lg"><h5>Job Title</h5></th>
+                    <th class="text-bg-Info fw-bolder col-auto text-center text-sm"><h5>S.N</h5></th>
+                    <th class="text-bg-Info fw-bolder text-center col-auto text-sm"><h5>Employee ID No.</h5></th>
+                    <th class="text-bg-Info fw-bolder text-center col-auto text-sm"><h5>DACO ID No.</h5></th>
+                    <th class="text-bg-success fw-bolder text-center col-4 text-sm"><h5>Employees Name</h5></th>
+                    <th class="text-bg-Info fw-bolder text-center col-4 text-sm"><h5>Job Title</h5></th>
                     ${Array.from({ length: daysInMonth }, (_, i) => {
                       const day = i + 1;
                       const dateStr = `${year}-${month}-${day}`;
-                      return `<th class="text-bg-Info fw-bolder text-center text-lg"><h5>${getDayName(
+                      return `<th class="text-bg-Info fw-bolder text-center text-sm"><h5>${getDayName(
                         dateStr
                       )}, ${day}</h5></th>`;
                     }).join("")}
-                    <th class="text-bg-Info fw-bolder text-center text-lg"><h5>Total</h5></th>
+                    <th class="text-bg-Info  text-center text-sm "><h5>Total</h5></th>
                 </tr>
             `;
 
